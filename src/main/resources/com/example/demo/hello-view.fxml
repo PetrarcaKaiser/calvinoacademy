@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="567.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+    <children>
+        <ChoiceBox fx:id="yearChoiceBox" layoutX="29.0" layoutY="155.0" onAction="#processDetails">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <ChoiceBox fx:id="classChoiceBox" layoutX="29.0" layoutY="200.0" onAction="#processDetails">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <ChoiceBox fx:id="studentChoiceBox" layoutX="29.0" layoutY="247.0" onAction="#processDetails">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <!-- TextFields -->
+        <TextField fx:id="nameField" layoutX="220.0" layoutY="155.0" promptText="Name" />
+        <TextField fx:id="surnameField" layoutX="220.0" layoutY="200.0" promptText="Surname" />
+        <Button fx:id="createButton" layoutX="220.0" layoutY="247.0" mnemonicParsing="false" onAction="#createDetails" text="Create" />
+
+        <TableView fx:id="tableView" layoutX="29.0" layoutY="300.0" prefHeight="250.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="courseNameColumn" text="Nome del corso" prefWidth="200" />
+                <TableColumn fx:id="hoursCompletedColumn" text="Ore svolte" prefWidth="100" />
+                <TableColumn fx:id="totalHoursColumn" text="Ore totali" prefWidth="100" />
+                <TableColumn fx:id="teacherNameColumn" text="Docente" prefWidth="200" />
+            </columns>
+        </TableView>
+
+        <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="/giuseppe.JPG" />
+            </image>
+        </ImageView>
+
+
+        <Label layoutX="193.0" layoutY="8.0" prefHeight="136.0" prefWidth="301.0" text="Istituto Tecnico Italo Calvino" textAlignment="CENTER">
+            <font>
+                <Font name="Noto Sans Regular" size="22.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
